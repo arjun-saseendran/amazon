@@ -3,7 +3,7 @@ import { getProduct } from "../../data/products.js";
 import { getDeliveryOption } from "../../data/deliveryOptions.js";
 import { formatCurrency } from "../utils/money.js";
 
-export function paymentSummary(){
+export function renderPaymentSummary(){
   let productPriceCents = 0;
   let shippingPriceCents = 0
   cart.forEach((cartItem) => {
@@ -27,7 +27,7 @@ export function paymentSummary(){
 
           <div class="payment-summary-row">
             <div>Shipping &amp; handling:</div>
-            <div class="payment-summary-money">$${formatCurrency(productPriceCents)}</div>
+            <div class="payment-summary-money">$${formatCurrency(shippingPriceCents)}</div>
           </div>
 
           <div class="payment-summary-row subtotal-row">
