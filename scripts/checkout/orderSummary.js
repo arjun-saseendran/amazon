@@ -103,7 +103,7 @@ export function renderOrderSummary() {
     return html;
   }
 
-  document.querySelector(".order-summary").innerHTML = cartSummeryHTML;
+  document.querySelector(".js-order-summary").innerHTML = cartSummeryHTML;
   document.querySelectorAll(".delete-quantity-link").forEach((link) => {
     link.addEventListener("click", () => {
       const productId = link.dataset.productId;
